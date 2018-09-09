@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NotificationService } from './notification.service';
 
+import { Notification } from '../notification';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,7 +11,7 @@ import { NotificationService } from './notification.service';
 export class AppComponent {
 
   title = 'github-feed-ng';
-  notifications = [];
+  notifications: Notification[];
 
   constructor(private notificationService: NotificationService) {
     this.notificationService.getNotifications().subscribe((notifications) => {
@@ -17,8 +19,8 @@ export class AppComponent {
     });
   }
 
-  getNotificationString(notification) {
-    const { org, repo, title } = notification;
-    return `${org}/${repo}: ${title}`;
+  getNotificationString(notification: Notification) {
+    const { organization, repository, title } = notification;
+    return `${organization}/${repository}: ${title}`;
   }
 }
