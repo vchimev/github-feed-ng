@@ -9,11 +9,9 @@ import { Notification } from '../../notification';
 })
 export class NotificationsListComponent implements OnInit {
   @Input() notifications: Notification[];
-  showDetails: boolean;
 
   constructor() { }
 
   ngOnInit() {
-    this.showDetails = false;
   }
 }

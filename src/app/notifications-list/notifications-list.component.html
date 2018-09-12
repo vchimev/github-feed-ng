@@ -1,4 +1,4 @@
 <div *ngFor="let notification of notifications">
-  <app-notification (click)="showDetails = !showDetails" [notification]="notification"></app-notification>
-  <app-notification-details *ngIf="showDetails" [notification]="notification"></app-notification-details>
+  <app-notification (click)="notification.showDetails = !notification.showDetails" [notification]="notification"></app-notification>
+  <app-notification-details *ngIf="notification.showDetails" [notification]="notification"></app-notification-details>
 </div>
