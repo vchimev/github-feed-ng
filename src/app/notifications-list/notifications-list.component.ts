@@ -14,9 +14,4 @@ export class NotificationsListComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  getNotificationString(notification: Notification) {
-    const { id, organization, repository, title } = notification;
-    return `${id}. ${organization}/${repository}: ${title}`;
-  }
 }

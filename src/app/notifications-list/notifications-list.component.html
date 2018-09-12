@@ -1,3 +1,3 @@
 <div *ngFor="let notification of notifications">
-  <p>{{ getNotificationString(notification) }}</p>
+  <app-notification [notification]="notification"></app-notification>
 </div>
