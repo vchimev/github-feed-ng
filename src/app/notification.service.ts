@@ -9,18 +9,38 @@ import { Notification } from '../notification';
 export class NotificationService {
 
   private notifications: Notification[] = [
-      {
-        id: 0,
-        organization: 'NativeScript',
-        repository: 'NativeScript',
-        title: 'Title 0'
-      },
-      {
-        id: 1,
-        organization: 'NativeScript',
-        repository: 'NativeScript',
-        title: 'Title 1'
-      }
+    {
+      id: 0,
+      organization: 'NativeScript',
+      repository: 'NativeScript',
+      title: 'Title 0',
+      comments: [
+        {
+          author: 'vchimev',
+          content: 'LGTM',
+        },
+        {
+          author: 'vasil.chimev',
+          content: 'LGTM'
+        }
+      ]
+    },
+    {
+      id: 1,
+      organization: 'NativeScript',
+      repository: 'NativeScript',
+      title: 'Title 1',
+      comments: [
+        {
+          author: 'vchimev',
+          content: 'LGTM',
+        },
+        {
+          author: 'vasil.chimev',
+          content: 'LGTM'
+        }
+      ]
+    }
   ];
 
   constructor() { }

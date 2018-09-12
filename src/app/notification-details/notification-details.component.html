@@ -1,3 +1,3 @@
-<p>
-  notification-details works!
-</p>
+<div *ngFor="let comment of (notification && notification.comments || [])">
+  <p><i>{{ comment.author }}</i>: {{ comment.content }}</p>
+</div>

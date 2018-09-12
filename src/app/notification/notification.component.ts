@@ -15,6 +15,6 @@ export class NotificationComponent implements OnInit {
 
   ngOnInit() {
     const { id, organization, repository, title } = this.notification;
-    this.notificationInfo = `${id}. ${organization}/${repository}: ${title}`; 
+    this.notificationInfo = `${id}. ${organization}/${repository}: ${title}`;
   }
 }
