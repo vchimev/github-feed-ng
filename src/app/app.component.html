@@ -2,6 +2,4 @@
   <h1>{{ title }}</h1>
 </div>
 
-<div *ngFor="let notification of notifications">
-  <p>{{ getNotificationString(notification) }}</p>
-</div>
+<app-notifications-list [notifications]="notifications"></app-notifications-list>

@@ -16,9 +16,4 @@ export class AppComponent {
   constructor(private notificationService: NotificationService) {
     this.notificationService.getNotifications().subscribe(notifications => this.notifications = notifications);
   }
-
-  getNotificationString(notification: Notification) {
-    const { id, organization, repository, title } = notification;
-    return `${id}. ${organization}/${repository}: ${title}`;
-  }
 }
